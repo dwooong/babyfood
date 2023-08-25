@@ -1,0 +1,44 @@
+{
+  "sectionAFoodData": [
+    {
+      "Category": "Soup",
+      "Image": "https://example.com/soup.jpg",
+      "Name": "Veggie Soup",
+      "InstagramLink": "https://www.instagram.com/veggiesoup/"
+    },
+    {
+      "Category": "Side Dishes",
+      "Image": "https://example.com/side_dish.jpg",
+      "Name": "Mashed Potatoes",
+      "InstagramLink": "https://www.instagram.com/mashedpotatoes/"
+    },
+    {
+      "Category": "Snacks",
+      "Image": "https://example.com/snack.jpg",
+      "Name": "Baby Bites",
+      "InstagramLink": "https://www.instagram.com/babybites/"
+    }
+  ],
+  "sectionBFoodData": [
+    {
+      "id": 1,
+      "Menu": "Stir-fried Pork",
+      "Daegubun": "Korean food",
+      "Subdivision": "Stir-fry",
+      "Main Ingredient": ["Pork", "Beef"],
+      "Sub-ingredients": ["Onion", "Green Onion"],
+      "Seasoning": ["Eating Oil", "Red Pepper Paste", "Red Pepper Powder", "Soy Sauce", "Sugar"],
+      "Link": "https://www.naver.com/"
+    },
+    {
+      "id": 2,
+      "Menu": "Mackerel Dish",
+      "Daegubun": "Korean food",
+      "Subdivision": "Fish Dish",
+      "Main Ingredient": ["Mackerel", "Tuna"],
+      "Sub-ingredients": ["Garlic", "Ginger"],
+      "Seasoning": ["Sesame Oil", "Soy Sauce", "Salt", "Sugar"],
+      "Link": "https://www.naver.com/"
+    }
+  ]
+}

@@ -1,0 +1,281 @@
+@font-face {
+  font-family: 'Ramche';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Ramche.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'Ramche';
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  display: flex;
+  margin:0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 100%;
+}
+
+.body-bg::before {
+  opacity: 50%;
+}
+
+.body-bg{
+  background-color: beige;
+  /* background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('bg-image.jpeg'); */
+  background-size: 100vh 100vh;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+
+header {
+  display: inline-flex;
+  background-color: white;
+  color: black;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  position: fixed;
+  top: 10px;
+  width: 350px;
+  height: 70px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.header-position{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+main {
+  background-color: white;
+  position: fixed;
+  top: 80px;
+  width: inherit;
+  height: 430px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+header h1 {
+  margin: 0;
+  margin-left: 10px;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+header h2 {
+  font-weight: 500;
+  font-size: 12px;
+  margin: 0;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: gainsboro;
+}
+
+.title a {
+  color: darkgrey;
+}
+
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.py-5 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.text-center {
+  text-align: center;
+  right: 0px;
+}
+
+/* 한국어 영어 언어 구분 */
+.language-buttons{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.btn-outline-light{
+  width: 50px;
+  font-weight: 500;
+  font-size: 11px;
+  height: 26px;
+  line-height: 13px;
+  padding: 0;
+}
+
+.btn-outline-light:hover{
+  border-color: black!important;
+  color: lightgray;
+  background-color: lightgoldenrodyellow;
+  border : dotted
+}
+
+
+.btn-group {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn {
+  border-radius: 0;
+  color: black;
+  border-color: black;
+  border: dotted;
+  border-width: 3px;
+  border-radius: 10px;
+}
+
+/* 메뉴 카테고리(한식, 중식 등) */
+.category-btn {
+  width: 25%;
+  /* background-image: url('wood.png'); */
+  color: black;
+  font-size: inherit;
+  font-weight: 300;
+  margin: 0 5px;
+  height: 120px;
+  width: 38px;
+  line-height: 30px;
+  padding: 0;
+  /* display: flex;
+  align-items: stretch; */
+}
+
+.category-btn:hover {
+  color: lightgray;
+  background-color: lightgoldenrodyellow;
+  border-color: black;
+
+}
+
+.btn-outline-secondary:not(:disabled):not(.disabled).active {
+  color: black;
+  background-color: lightgoldenrodyellow;
+  border-color: black;
+}
+
+.vertical-text{
+  writing-mode: vertical-rl;
+  writing-mode: tb-rl;
+  -moz-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+  text-orientation: mixed;
+}
+
+.recommend-btn {
+  display: block;
+  margin: 0 auto;
+}
+
+.countdown {
+  font-size: 3rem;
+  font-weight: bold;
+  display: none;
+  margin-bottom: 2rem;
+}
+
+.recommended-menu {
+  display: none;
+}
+
+.recommended-menu div {
+  border: 1px solid #ddd;
+  padding: 20px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.recommended-menu img {
+  width: 50px;
+}
+
+.food-images-category {
+  width: 100%;
+  height: 100%;
+}
+
+.right-border {
+  border-top-right-radius: 10px!important;
+  border-bottom-right-radius: 10px!important;
+}
+
+.left-border {
+  border-top-left-radius: 10px!important;
+  border-bottom-left-radius: 10px!important;
+}
+
+#kakaotalk-sharing-btn > img {
+  width: 50px;
+  height: 50px;
+  border: dotted;
+  border-color: black;
+  border-radius: 10px;
+}
+
+#kakaotalk-sharing-btn:hover{
+  background-color: lightgoldenrodyellow;
+}
+
+
+footer {
+  text-align: center;
+  font-size: 9px;
+  width: 100%;
+  height: 40px;
+  bottom : 0px;
+  padding-top: 5px;
+  position: absolute;
+  background-color: #ffffff;
+  background-color: rgba( 255, 255, 255, 0.7 );
+}
+
+.add-position{
+  /* background-color: rgb(250, 250, 168); */
+  width: 100%;
+  top: 520px;
+  position: absolute;
+  /* display: flex;
+  justify-content: center; */
+}
+
+/* 오픈 예정 공지, 삭제 예정 */
+/* .temp-message{
+  display:block;
+  position: absolute;
+  width: 100%;
+  height: 50vh;
+  line-height: 50vh;
+  top: 50px;
+  background-color: beige;
+  text-align: center;
+  opacity: 90%;
+  font-weight: 900;
+  font-size: large;
+} */
+
+/* 티스토리 광고 숨기기, 티스토리 광고는 애초에 안뜨는듯, 혹시 몰라 참고 */
+ins.adsbygoogle[data-ad-client="ca-pub-9527582522912841"] { display: none !important; }

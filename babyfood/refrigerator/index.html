@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>냉장고 털기</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="WOOOOONG">
+  <meta name="keywords" content="eat">
+  <meta name="description" content="refrigerator clear">
+
+  <!-- sns share -->
+  <meta property="og:url" content="#" />
+  <meta property="og:title" content="냉장고 털기" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./image/top.png" />
+  <meta property="og:description" content="냉장고 털어먹기" />
+  
+  <!--favicon-->
+  <link rel="shortcut icon" href="./image/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="./image/favicon.ico" />
+
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  <script>
+    // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
+    Kakao.init('815c63d6ae1ab839f3bd03a9d5c61fe5');
+
+    // SDK 초기화 여부를 판단합니다.
+    Kakao.isInitialized()
+    console.log(Kakao.isInitialized());
+  </script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <header>
+    <p>냉장고 털어먹기</p>
+  </header>
+  
+  <section id="mainSelect">
+    <div id="select">
+      <label for="selectItems">우리 집 냉장고에는?</label>
+      <div>
+        <select id="selectItems">
+          <option value="" disabled selected>재료선택</option>
+          <optgroup label="고기">
+              <option value="소고기">소고기</option>
+              <option value="돼지고기">돼지고기</option>
+              <option value="닭고기">닭고기</option>
+          </optgroup>
+          <optgroup label="야채">
+              <option value="양파">양파</option>
+              <option value="대파">대파</option>
+              <option value="마늘">마늘</option>
+          </optgroup>
+      </select>
+      </div>
+    </div>
+    <div id="selected">
+      <div class="sectionTitle">
+        <div id="findBtnAlign">
+          <label for="selectedItem">냉장고 재료 목록</label>
+          <button class="menuRecipeBtn" id="findBtn">레시피?</button>
+          <div class="findBtnMemo">
+            <p>'레시피?' 클릭 시, 가능 레시피 검색</p>
+            <p>생성 카드 클릭 시 삭제</p>
+          </div>
+        </div>
+        <button class="toggleBtn" id="selectTogleBtn">숨기기</button>
+      </div>
+      <div id="selectedItems"></div>
+    </div>
+  </section>
+
+  <section id="possible">
+    <div class="sectionTitle">
+      <label for="possibleCard">지금 재료로 가능한 메뉴</label>
+      <div>
+        <button class="menuBtn" id="clearPossilbeBtn">지우기</button>
+        <button class="toggleBtn" id="possibleTogleBtn">숨기기</button>
+      </div>
+    </div>
+    <div id="possibleCard">
+      <!-- 카드 생성 장소 -->
+    </div>
+  </section>
+
+  <section id="impossible">
+    <div class="sectionTitle">
+      <label for="impossibleCard">재료 추가 후 가능 메뉴</label>
+      <div>
+        <button class="menuBtn" id="clearImpossilbeBtn">지우기</button>
+        <button class="toggleBtn" id="impossibleTogleBtn">숨기기</button>
+      </div>
+    </div>
+    <div id="impossibleCard">
+      <!-- <div class="card" id="sampleSome">
+        <div class="card-header">
+          제육볶음
+        </div>
+        <img src="./image/card.png" alt="" />
+        <div class="card-body">
+          <h5 class="card-title">메인재료</h5>
+          <p class="card-text">돼지고기</p>
+          
+          <h5 class="card-title">부재료</h5>
+          <p class="card-text">양파</p>
+          <p class="card-text">대파</p>
+          
+          <h5 class="card-title">양념</h5>
+          <p class="card-text">간장</p>
+          <p class="card-text">고추장</p>
+          <p class="card-text">설탕</p>
+
+          <a href="#" class="btn btn-primary">만드는법</a>
+        </div>
+      </div> -->
+    </div>
+  </section>
+  <br>
+
+  
+  <footer>
+    <span>냉장고 털어먹기</span>
+    <button id="kakaoShare" class="btn btn-outline-warning" onclick="js:kakaoShare()">카카오톡 공유하기</button>
+  </footer>
+
+
+  <script type="text/javascript" src="./js/script.js"></script>
+  <script type="text/javascript" src="./js/createEl.js"></script>
+  <script type="text/javascript" src="./js/dataload.js"></script>
+
+  <script type="text/javascript" src="./js/kakaoshare.js"></script>
+
+</body>
+
+</html>

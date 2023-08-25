@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메뉴 추천 룰렛</title>
+  <meta name="description" content="오늘 먹을 메뉴를 룰렛 게임으로 골라보자">
+  <meta name="keywords" content="메뉴 추천 룰렛, 점메추, 메뉴 룰렛, 메뉴 추천">
+  <meta name="author" content="ooooong" />
+
+  <meta property="og:title" content="메뉴 추천 룰렛">
+  <meta property="og:url" content="https://menu.ooooong.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="메뉴 추천 룰렛">
+  <meta property="og:description" content="오늘 먹을 메뉴를 룰렛 게임으로 골라보자">
+
+  <meta name="twitter:title" content="메뉴 추천 룰렛">
+  <meta name="twitter:card" content="og-image.png">
+  <meta name="twitter:description" content="오늘 먹을 메뉴를 룰렛 게임으로 골라보자">
+  <meta name="twitter:image" content="og-image.png">
+
+  <link rel="canonical" href="https://menu.ooooong.com/">	
+
+  <!-- 캐시 완료(파기) 시간 정의, 분단위 -->
+  <META HTTP-EQUIV="Expire" ConTENT="10">	
+
+
+  <!-- Link to Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="reference.css">
+  
+  <!-- 파비콘 -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- 구글 서치콘솔 http -->
+  <meta name="google-site-verification" content="6qCPxAB3fwu6OafYeSFDvwOX4EFq8dvqcT5RLG7-L-w" />
+  
+  <!-- 구글 서치콘솔 https -->
+
+
+  <!-- 네이버 서치 어드바이저 http -->
+  <meta name="naver-site-verification" content="b277f588b898389ceff82dff069266ef4fd43fc9" />
+
+  <!-- 네이버 서치 어드바이저 https -->
+
+  <!-- Google tag (gtag.js) http -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5E2WE5CXFE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5E2WE5CXFE');
+</script>
+
+  <!-- Google tag (gtag.js) https -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W27N31HQ3P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-W27N31HQ3P');
+</script>
+
+</head>
+<body class="body-bg">
+  <header>
+    <div class="container header-position">
+      <h1>메뉴추천</h1>
+      <div class="title">
+        <a href="https://www.instagram.com/p/CvMQBK2rPdN/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target='_blank'><h2>#메뉴추천룰렛&nbsp;&nbsp;</h2></a>
+        <a href="https://www.instagram.com/p/CvMQBK2rPdN/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target='_blank'><h2>#점메추룰렛&nbsp;&nbsp;</h2></a>
+        <a href="https://www.instagram.com/p/CvMQBK2rPdN/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target='_blank'><h2>#점메추&nbsp;&nbsp;</h2></a>
+      </div>
+    </div>
+
+    <!-- Korean and English buttons for language selection -->
+    <div class="language-buttons">
+      <button type="button" class="btn btn-outline-light language-btn" onclick="selectLanguage('Korean')">Ko</button>
+      <button type="button" class="btn btn-outline-light language-btn" onclick="selectLanguage('English')">En</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="container text-center">
+      <div class="btn-group" role="group" aria-label="Menu Categories">
+        <button type="button" class="btn vertical-text btn-outline-secondary category-btn left-border" onclick="selectCategory('전체')">전체</button>
+        <button type="button" class="btn vertical-text btn-outline-secondary category-btn" onclick="selectCategory('한식')">한식</button>
+        <button type="button" class="btn vertical-text btn-outline-secondary category-btn" onclick="selectCategory('중식')">중식</button>
+        <button type="button" class="btn vertical-text btn-outline-secondary category-btn" onclick="selectCategory('일식')">일식</button>
+        <button type="button" class="btn vertical-text btn-outline-secondary category-btn" onclick="selectCategory('양식')">양식</button>
+        <button type="button" class="btn vertical-text btn-outline-secondary category-btn" onclick="selectCategory('후식')">후식</button>
+        <button type="button" class="btn vertical-text btn-outline-secondary category-btn" onclick="selectCategory('야식')">야식</button>
+        <button type="button" class="btn vertical-text btn-outline-secondary category-btn right-border" onclick="selectCategory('다이어트')">다이어트</button>
+      </div>
+
+      <div class="app">
+        <img src="pointer.png" alt="" width="50" height="50">
+        <div class="scopeHidden">
+          <ul class="scopeHidden-li"></ul>
+        </div>
+        
+        <div class="app-button">
+          <button class="btn start-btn">click</button>
+          
+          <!-- 카카오톡 공유하기 -->
+          <a id="kakaotalk-sharing-btn" href="javascript:;">
+            <img src="kakao_logo.png"
+            alt="카카오톡 공유 보내기 버튼" />
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  
+<!-- 오픈 예정 공지, 삭제 예정 -->
+  <!-- <div class="temp-message">
+    Comming Soon - 23.08.07 open
+  </div> -->
+
+      <!-- 구글 애드센스 자리 -->
+      <div class="add-position">
+        <!-- 구글 애드센스 -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9228631354050915"
+        crossorigin="anonymous"></script>
+        <!-- menu app -->
+        <ins class="adsbygoogle"
+        style="display:block; height:100px;"
+        data-ad-client="ca-pub-9228631354050915"
+        data-ad-slot="6017368266"
+        data-ad-format="horizontal"
+        data-ad-format="auto"
+        data-full-width-responsive="false"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <!-- 구글 애드센스 -->
+      </div>
+      <!-- 구글 애드센스 자리 -->
+
+
+  <footer>
+    <nav>
+      <a href="https://www.instagram.com/menu_roulette/" target='_blank'><img src="instagram_logo.png" alt="" width="20" height="20">&nbsp;instagram.com/menu_roulette</a><br>
+    </nav>
+    <div>
+      <span>Copyright 2023. by ooooong All Rights Reserved.</span>
+    </div>
+  </footer>
+  <!-- Link to jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+
+
+
+  <!-- 카카오톡 공유하기 -->
+  <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.3.0/kakao.min.js"
+  integrity="sha384-70k0rrouSYPWJt7q9rSTKpiTfX6USlMYjZUtr1Du+9o4cGvhPAWxngdtVZDdErlh" crossorigin="anonymous"></script>
+
+  <script>
+    Kakao.init('9552c6ced781031037de2a9fe3a2027f'); // 사용하려는 앱의 JavaScript 키 입력
+  </script>
+
+
+  <script>
+    Kakao.Share.createDefaultButton({
+      container: '#kakaotalk-sharing-btn',
+      objectType: 'feed',
+      content: {
+        title: '메뉴 추천 룰렛',
+        description: '#점메추 #메뉴룰렛 #메뉴추천룰렛 #메뉴추천 #오늘뭐먹지 #점심메뉴추천',
+        imageUrl:
+          'https://lh3.googleusercontent.com/u/0/drive-viewer/AITFw-wK5lGqrMl2tESPbKIMmaBW82-y51Xi4wmOnwvU-f5W7vngsmTYJtL15NhHK6UQiVdO4XCfoAdrUHeivBabIWi534gH=w996-h811',
+        link: {
+          // [내 애플리케이션] > [플랫폼] 에서 등록한 사이트 도메인과 일치해야 함
+          mobileWebUrl: 'https://menu.ooooong.com',
+          webUrl: 'https://menu.ooooong.com',
+        },
+      }
+    });
+  </script>
+
+</body>
+</html>

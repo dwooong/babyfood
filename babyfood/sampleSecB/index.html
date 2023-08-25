@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baby Food Page</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#" id="sectionAButton">Section A</a></li>
+        <li><a href="#" id="sectionBButton">Section B</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section id="sectionA">
+    <h2>Section A</h2>
+    <div id="sectionACategories">
+      <button id="allBtn">All</button>
+      <button id="soupBtn">Soup</button>
+      <button id="sideDishesBtn">Side Dishes</button>
+      <button id="snacksBtn">Snacks</button>
+    </div>
+    <div id="sectionAFoodList">
+      <!-- Food items will be added here -->
+    </div>
+  </section>
+  
+  <section id="sectionB">
+    <h2>Section B</h2>
+    <div id="sectionBIngredients">
+      <!-- Ingredients will be added here -->
+    </div>
+    <div id="sectionBMenu">
+      <h3>Selected Ingredient:</h3>
+      <div id="selectedIngredient"></div>
+      <h3>Menus that can be made:</h3>
+      <ul id="menusCanBeMade">
+        <!-- Menus will be added here -->
+      </ul>
+      <h3>Menu if you add some ingredients:</h3>
+      <ul id="menusWithAdditionalIngredients">
+        <!-- Menus will be added here -->
+      </ul>
+    </div>
+  </section>
+
+  <script src="sectionA.js"></script>
+  <script src="sectionB.js"></script>
+
+</body>
+</html>
