@@ -29,7 +29,101 @@ header {
 .sectionArea{
   position: fixed;
   top: 100px;
+  width: 90%;
+  height: 70%;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.secAmenuDisplay{
+  height: fit-content;;
+  overflow: hidden; 
+  overflow-x: scroll;
+}
+
+/* 아래의 모든 코드는 영역::코드로 사용 */
+.secAmenuDisplay::-webkit-scrollbar {
+  height: 15px;  /* 스크롤바의 너비 */
+}
+
+.secAmenuDisplay::-webkit-scrollbar-thumb {
+  background: #217af4; /* 스크롤바의 색상 */
+  border-radius: 7px;
+}
+
+.secAmenuDisplay::-webkit-scrollbar-track {
+  background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
+}
+
+.secAlist{
+  display: flex;
+  margin: 0;
+  list-style-type: none;
+  align-items: center;
+  padding: 0;
+}
+
+.menu-wrapper{
+  text-decoration: none;
+}
+
+.foodImage{
+  width: 250px;
+  height: 250px;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.menu-pan-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.menu-pan-logo{
+  width: 50px;
+  height: 50px;
+}
+
+.menu-pan{
+  text-align: center;
+  color: black;
+}
+
+.secAdetail{
+  display: flex;
+  height: 300px;
+}
+
+.secAdetailImage{
+  width: 50%;
+}
+
+.secAdetailImagelist{
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  overflow: hidden; 
+  overflow-x: scroll;
+}
+
+/* 아래의 모든 코드는 영역::코드로 사용 */
+.secAdetailImagelist::-webkit-scrollbar {
+  height: 15px;  /* 스크롤바의 너비 */
+}
+
+.secAdetailImagelist::-webkit-scrollbar-thumb {
+  background: #e3ff65; /* 스크롤바의 색상 */
+  border-radius: 7px;
+}
+
+.secAdetailImagelist::-webkit-scrollbar-track {
+  background: rgba(254, 255, 201, 0.1);  /*스크롤바 뒷 배경 색상*/
+}
+
+.secAdetailIn{
+  width: 50%;
 }
 
 footer {
